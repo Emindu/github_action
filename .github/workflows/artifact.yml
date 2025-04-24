@@ -45,7 +45,8 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: linux
-
+    - name: List files after artifact download
+      run: ls -lR
     - name: Test ${{ env.FILE_NAME }}
       run: source ./test.sh
 
