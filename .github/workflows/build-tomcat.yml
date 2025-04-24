@@ -17,10 +17,12 @@ jobs:
           java -version
 
     - name: Check out Apache Tomcat
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4  # Upgrade from v2 to v4
       with:
-        repository: apache/tomcat # Repository name with owner
-        ref: master               # The branch, tag or SHA to checkout
+        repository: apache/tomcat
+        ref: main                # Apache Tomcat uses "main" branch, not "master"
+        path: ./tomcat
+        fetch-depth: 0           # Fetch full history to avoid shallow clone issues
 
     - name: Setup Java 9
       uses: actions/setup-java@v1
