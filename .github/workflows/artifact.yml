@@ -1,6 +1,6 @@
 name: artifact
 
-on: [push]
+on: []
 
 env:
   FILE_NAME: hello-server
