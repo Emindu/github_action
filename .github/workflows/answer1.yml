@@ -19,7 +19,7 @@ jobs:
       - name: step two
         run: date 
 
-  job1:
+  job3:
     name: Third_Job
     runs-on: macos-latest
     steps:
@@ -28,7 +28,7 @@ jobs:
       - name: step two
         run: date
 
-  job1:
+  job4:
     name: Forth_job
     needs: [ job1, job2, job3]
     runs-on: ubuntu-latest
